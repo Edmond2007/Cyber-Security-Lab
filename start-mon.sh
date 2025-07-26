@@ -13,7 +13,7 @@ select action in "Start Monitor Mode" "Stop Monitor Mode" "Exit"; do
             break
             ;;
         "Stop Monitor Mode")
-	    airmon-ng stop wlan0
+	    airmon-ng stop wlan0mon
 	    systemctl start wpa_supplicant
 	    systemctl start NetworkManager
             echo "Monitor Mode Stoped"
